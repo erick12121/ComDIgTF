@@ -1,0 +1,32 @@
+matriz = []
+auxiliar = 0
+for i in range (0,10):
+    matriz.append([])
+    auxiliar = 0
+    for j in range (0,5):
+        valor = int(input('Alumno {}, Nota {} : '.format(i+1,j+1)))
+        while(valor<0):
+            print('Valor invalido, solo se aceptan valores positivos')
+            valor = int(input('Alumno {}, Nota {} : '.format(i+1,j+1)))
+        auxiliar = auxiliar + valor
+        matriz[i].append(valor)
+    promedio = auxiliar/5
+    matriz[i].append(promedio)
+
+print('\n\n')
+print('             N1  N2  N3  N4  N5  PROMEDIO')
+i=1
+for fila in matriz:
+    print('Alumno {} : '.format(i), end= "  ")
+    i = i+1
+    for elemento in fila:      
+        print('{}'.format(elemento), end="  ")
+    print()
+
+print('RESUMEN    ', end="  ")
+for columna in range(0,5):
+    acumulador = 0
+    for fila in range(0,10):
+        acumulador = acumulador + matriz[fila][columna]
+    acumulador = acumulador/10
+    print(acumulador, end="  ")
