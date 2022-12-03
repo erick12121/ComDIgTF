@@ -14,7 +14,7 @@ for i in range (0,10):
     matriz[i].append(promedio)
 
 print('\n\n')
-print('             N1  N2  N3  N4  N5  PROMEDIO')
+print('             N1  N2  N3  N4  N5  Suma de cada Alumno')
 i=1
 for fila in matriz:
     print('Alumno {} : '.format(i), end= "  ")
@@ -23,7 +23,7 @@ for fila in matriz:
         print('{}'.format(elemento), end="  ")
     print()
 
-print('RESUMEN    ', end="  ")
+print('Suma de cada columna    ', end="  ")
 for columna in range(0,5):
     acumulador = 0
     for fila in range(0,10):
